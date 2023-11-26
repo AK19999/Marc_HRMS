@@ -1,0 +1,21 @@
+<?php
+session_start();
+$text=$_SESSION['secure'];
+$font_size=15;
+$image_height=40;
+$image_width=100;
+$image=imagecreate($image_width,$image_height);
+imagecolorallocate($image,255,255,255);
+$text_color=imagecolorallocate($image,80,80,15);
+for($x=1;$x<=30;$x++)
+{
+	$x1=rand(1,100);
+	$x2=rand(1,100);
+	$x3=rand(1,100);
+	$x4=rand(1,100);
+
+imageline($image,$x1,$x2,$x3,$x4,$text_color);
+}
+imagettftext($image,$font_size,0,10,30,$text_color,'tt0351m_.ttf',$text);
+imagejpeg($image);
+?>
