@@ -15,6 +15,7 @@ $location="Employee/";
 $status='y';
 $dob=$_POST['dob'];
 $mo=$_POST['mobile'];
+
 $ad=$_POST['address'];
 //echo $n,$fn,$g,$e,$p,$dept,$dob,$mo,$ad ;
 
